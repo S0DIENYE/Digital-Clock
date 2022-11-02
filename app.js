@@ -1,4 +1,4 @@
-function setTime() {
+const time = setInterval(() => {
     const currentdate = new Date();
 
     const hour = currentdate.getHours()
@@ -10,13 +10,7 @@ function setTime() {
         hour >= 12 ? session = 'PM' : session = 'AM';
     document.querySelector('div h1').innerHTML = time;
     document.querySelector('[time-zone]').innerHTML = session;
-}
-window.onload = () => {
-    setTime()
-}
-setInterval(setTime, 1000)
-
-console.log(Date())
+}, 1000)
 
 
 
