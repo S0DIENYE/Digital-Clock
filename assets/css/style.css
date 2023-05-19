@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 8.5rem;
+}
+
+div[clock-body] {
+    position: relative;
+    /* background: peru; */
+    background: #18191a;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span[time-zone] {
+    padding-left: 1rem;
+    font-size: 4rem;
+}
+
+div[clock-state] {
+    /* display: flex;
+    align-items: center; */
+}
+
+.navbar{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    background: #1c1c1d;
+}
+
+nav{
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    text-align: center!important;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li .icon{
+    margin: auto;
+    margin-bottom: 5px;
+    display: block;
+}
+
+nav ul li.active{
+    color: peru!important;
+}
+
+/*------------------------
+    # Stopwatch state
+------------------------*/
+div[clock-state="stopwatch"] .buttons-group{
+    margin-top: 10px;
+    padding: 10px;
+    /* display: block; */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div[clock-state="stopwatch"] button{
+    font-size: 18px;
+    padding: 15px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+div[clock-state="stopwatch"] button.lap{
+    background: #2c2c2c7e;
+    color: #fff;
+    border: 2px solid #2c2c2c7e;
+}
+
+div[clock-state="stopwatch"] button.start{
+    background: peru;
+    border: 2px solid peru;
+}
+
+div[clock-state="stopwatch"] button.stop{
+    background: #cc0b18a4;
+    border: 2px solid #cf0210a4;
+}
+
+/*------------------------
+    # Timer state
+------------------------*/
+.display-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 1rem 8rem;
+    background: #2c2c2c7e;
+    border-radius: 3px;
+}
+
+input:focus{
+    outline: 0 !important;
+    color: #fff;
+    border-color: none;
+    box-shadow: none;
+}
+
+input[type="number"] {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff!important;
+    background: none;
+    border: none;
+    margin-right: 1rem;
+    width: 6rem;
+}
+
+/* Remove arrows on number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

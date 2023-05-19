@@ -4,38 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendors/bootstrap-icons/bootstrap-icons-1.5.0/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Digital Clock</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: Calibri;
-            background: peru;
-            color: white;
-        }
-        h1{
-            font-size: 8.5rem;
-        }
-        div{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        span{
-            padding-left: 1rem;
-            font-size: 4rem;
-        }
-    </style>
 </head>
 <body>
-    <div>
-        <h1></h1>
-        <span time-zone>AM</span>
+
+    <div clock-body>
+        <div clock-state="stopwatch">
+            <!-- Clock -->
+            <!-- <h1></h1>
+            <span time-zone>AM</span> -->
+
+            <!-- Stopwatch -->
+            <!-- <h1>
+                <span>00 :</span>
+                <span>00 :</span>
+                <span>00</span>
+            </h1>
+            <div class="buttons-group">
+                <button class="lap">Lap</button>
+                <button class="start">Start</button>
+                <button class="stop">Stop</button>
+            </div> -->
+
+            <!-- Timer -->
+            <div class="display-group">
+                <input type="number" placeholder="0 hours">
+                <input type="number" placeholder="0 minutes">
+                <input type="number" placeholder="0 seconds">
+            </div>
+
+        </div>
+
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li class="active" id="clock">
+                        <img src="assets/icons/globe2.svg" class="icon">
+                        <a href="#">Clock</a>
+                    </li>
+
+                    <li>
+                        <img src="assets/icons/alarm.svg" class="icon">
+                        <a href="#">Stopwatch</a>
+                    </li>
+                    
+                    <li>
+                        <img src="assets/icons/clock-history.svg" class="icon">
+                        <a href="#">Timer</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
 
 
-    <script src="app.js"></script>
+    <!-- <script src="assets/js/app.js"></script> -->
 </body>
 </html>
