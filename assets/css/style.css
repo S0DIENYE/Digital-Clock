@@ -27,9 +27,9 @@ span[time-zone] {
     font-size: 4rem;
 }
 
-div[clock-state] {
-    /* display: flex;
-    align-items: center; */
+div .clock-time {
+    display: flex;
+    align-items: baseline;
 }
 
 .navbar{
@@ -69,7 +69,7 @@ nav ul li.active{
 /*------------------------
     # Stopwatch state
 ------------------------*/
-div[clock-state="stopwatch"] .buttons-group{
+div[clock-state] .buttons-group{
     margin-top: 10px;
     padding: 10px;
     /* display: block; */
@@ -78,7 +78,7 @@ div[clock-state="stopwatch"] .buttons-group{
     width: 100%;
 }
 
-div[clock-state="stopwatch"] button{
+div[clock-state] button{
     font-size: 18px;
     padding: 15px;
     height: 70px;
@@ -87,18 +87,18 @@ div[clock-state="stopwatch"] button{
     cursor: pointer;
 }
 
-div[clock-state="stopwatch"] button.lap{
+div[clock-state] button.lap{
     background: #2c2c2c7e;
     color: #fff;
     border: 2px solid #2c2c2c7e;
 }
 
-div[clock-state="stopwatch"] button.start{
+div[clock-state] button.start{
     background: peru;
     border: 2px solid peru;
 }
 
-div[clock-state="stopwatch"] button.stop{
+div[clock-state] button.stop{
     background: #cc0b18a4;
     border: 2px solid #cf0210a4;
 }
